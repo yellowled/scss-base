@@ -10,8 +10,7 @@ $ligatures: common-ligatures discretionary-ligatures historical-ligatures
         font-family: $family;
         font-style: $style;
         font-weight: $weight;
-        src: url("#{$path}#{$src}.woff2") format("woff2"),
-            url("#{$path}#{$src}.woff") format("woff");
+        src: url("#{$path}#{$src}.woff2") format("woff2");
     }
 }
 
