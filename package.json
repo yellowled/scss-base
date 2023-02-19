@@ -1,0 +1,26 @@
+{
+    "name": "scss-base",
+    "version": "0.1.0",
+    "description": "Re-usable SCSS modules",
+    "main": "src/index.scss",
+    "scripts": {
+        "lint": "stylelint src/**/*.scss",
+        "prettier": "prettier -c src/**/*.scss",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:yellowled/scss-base.git"
+    },
+    "author": "Matthias Mees <mm@yellowled.de> (https://github.com/yellowled)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/yellowled/scss-base/issues"
+    },
+    "homepage": "https://github.com/yellowled/scss-base#readme",
+    "devDependencies": {
+        "prettier": "^2.8.4",
+        "stylelint": "^15.2.0",
+        "stylelint-config-standard-scss": "^7.0.1"
+    }
+}
