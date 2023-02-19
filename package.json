@@ -4,6 +4,7 @@
     "description": "Re-usable SCSS modules",
     "main": "src/index.scss",
     "scripts": {
+        "build": "sass src/index.scss dist/index.css",
         "lint": "stylelint src/**/*.scss",
         "prettier": "prettier -c src/**/*.scss",
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +21,7 @@
     "homepage": "https://github.com/yellowled/scss-base#readme",
     "devDependencies": {
         "prettier": "^2.8.4",
+        "sass": "^1.58.3",
         "stylelint": "^15.2.0",
         "stylelint-config-standard-scss": "^7.0.1"
     }
