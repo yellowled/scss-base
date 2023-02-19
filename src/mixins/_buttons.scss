@@ -1,0 +1,151 @@
+@use "sass:color";
+
+$radius: 4px !default;
+$focus: #06f !default;
+$padding: 0.1875rem 0.625rem !default;
+
+@mixin gradient($bg: #ddd, $fg: #000, $rad: $radius) {
+    background-clip: padding-box;
+    background-color: color.adjust($bg, $lightness: 13.2%);
+    background-image: linear-gradient(
+        to bottom,
+        color.adjust($bg, $lightness: 13.2%),
+        $bg
+    );
+    border: 1px solid;
+    border-color: $bg color.adjust($bg, $lightness: -13.2%)
+        color.adjust($bg, $lightness: -26.5%);
+    border-radius: $rad;
+    color: $fg;
+    display: inline-block;
+    line-height: normal;
+    outline: 0;
+    padding: $padding;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: color.invert($fg) 0 1px 1px;
+    width: auto;
+
+    &:hover {
+        background-color: color.adjust($bg, $lightness: 13.2%);
+        background-image: linear-gradient(
+            to bottom,
+            color.adjust($bg, $lightness: 13.2%),
+            color.adjust($bg, $lightness: -6.5%)
+        );
+    }
+
+    &:active {
+        background-color: color.adjust($bg, $lightness: 13.2%);
+        background-image: linear-gradient(
+            to bottom,
+            color.adjust($bg, $lightness: 13.2%),
+            color.adjust($bg, $lightness: -6.5%)
+        );
+        border-color: color.adjust($bg, $lightness: -26.5%)
+            color.adjust($bg, $lightness: -13.2%) $bg;
+        box-shadow: inset rgba(0 0 0 / 25%) 0 1px 2px 0;
+    }
+
+    &:focus {
+        box-shadow: $focus 0 0 5px 0;
+        z-index: 1;
+    }
+
+    &:active,
+    &:visited,
+    &:hover,
+    &:focus {
+        color: $fg;
+    }
+}
+
+@mixin flat(
+    $bg: #ddd,
+    $fg: #000,
+    $rad: $radius,
+    $alt-color: color.complement($bg)
+) {
+    background: $bg;
+    background-clip: padding-box;
+    border: 1px solid $bg;
+    border-radius: $rad;
+    color: $fg;
+    display: inline-block;
+    line-height: normal;
+    outline: 0;
+    padding: $padding;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    width: auto;
+
+    &:active,
+    &:hover,
+    &:focus {
+        background: $alt-color;
+        border-color: $alt-color;
+        color: $fg;
+    }
+
+    &:focus {
+        box-shadow: none;
+        z-index: auto;
+    }
+}
+
+@mixin outline($fg: #000, $alt-color: #fff, $border-width: 1px, $rad: $radius) {
+    background: transparent;
+    background-clip: padding-box;
+    border: $border-width solid $fg;
+    border-radius: $rad;
+    color: $fg;
+    display: inline-block;
+    line-height: normal;
+    outline: 0;
+    padding: $padding;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    width: auto;
+
+    &:active,
+    &:hover,
+    &:focus {
+        background: $fg;
+        color: $alt-color;
+    }
+
+    &:focus {
+        box-shadow: none;
+        z-index: auto;
+    }
+}
+
+@mixin unstyled($fg: #000, $bg: transparent, $alt-color: #000) {
+    background: transparent;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 0;
+    color: $fg;
+    display: inline-block;
+    line-height: normal;
+    outline: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: none;
+    width: auto;
+
+    &:active,
+    &:hover,
+    &:focus {
+        background: $bg;
+        color: $alt-color;
+    }
+
+    &:focus {
+        box-shadow: none;
+        z-index: auto;
+    }
+}
