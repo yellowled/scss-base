@@ -21,7 +21,7 @@
     "homepage": "https://github.com/yellowled/scss-base#readme",
     "devDependencies": {
         "prettier": "^3.0.2",
-        "sass": "^1.66.0",
+        "sass": "^1.66.1",
         "stylelint": "^15.10.3",
         "stylelint-config-standard-scss": "^10.0.0"
     }
