@@ -1,6 +1,9 @@
 $attribution: "> footer" !default;
 $dir: "../fonts/" !default;
-$features: "frac" 1, "kern" 1, "swsh" 1 !default;
+$features:
+    "frac" 1,
+    "kern" 1,
+    "swsh" 1 !default;
 $ligatures: common-ligatures discretionary-ligatures historical-ligatures
     contextual !default;
 
