@@ -14,5 +14,6 @@ module.exports = {
                 ignoreProperties: ["appearance", "text-size-adjust"],
             },
         ],
+        "scss/dollar-variable-colon-space-after": "always-single-line",
     },
 };

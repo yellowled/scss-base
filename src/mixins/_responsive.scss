@@ -29,9 +29,8 @@
 // mixin needs to be applied to a div containing the table
 @mixin table($breakpoint: 576px) {
     min-height: 0.01%;
+    overflow: auto hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    overflow-x: auto;
-    overflow-y: hidden;
 
     th,
     td {
